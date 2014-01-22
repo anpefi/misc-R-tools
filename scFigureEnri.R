@@ -48,7 +48,7 @@ plotEnriGO <- function(file, fdr=0.05, by.cats=T, colores=c("red","blue"), lab.l
   
   # Read data
   clases <- c("character","character","factor","numeric","numeric","numeric","numeric","numeric","numeric","character","character","character")
-  data <- read.table(file, , header=F, skip=1, sep="\t", colClasses=clases, quote="\"")[,1:10]
+  data <- read.table(file, header=F, skip=1, sep="\t", colClasses=clases, quote="\"")[,1:10]
   colnames(data)<-c("GO-ID","Term","Category","FDR","P-Value","n.Test","n.Ref","n.notAnnotTest","n.notAnnotRef","Over/Under")
   
   #Filter data by category and threshold FDR
